@@ -1,0 +1,8 @@
+<app-categories (categorySelected)="onCategorySelected($event)"></app-categories>
+
+<div class="app-container">
+  <h1>Announcements</h1>
+  <div *ngFor="let announcement of filteredAnnouncements ?? []">
+    <app-announcement [announcement]="announcement"></app-announcement>
+  </div>
+</div>
