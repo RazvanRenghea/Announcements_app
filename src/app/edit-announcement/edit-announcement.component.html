@@ -1,0 +1,39 @@
+<form class="example-form">
+  <table>
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Title</mat-label>
+          <input matInput placeholder="Title" [(ngModel)]="announcement.title" name="title" required>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Author</mat-label>
+          <input matInput placeholder="Author" [(ngModel)]="announcement.author" name="author" required>
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+  <mat-form-field class="example-full-width">
+    <mat-label>Leave a message</mat-label>
+    <textarea matInput placeholder="..." [(ngModel)]="announcement.description" name="message" required></textarea>
+  </mat-form-field>
+
+  <h4></h4>
+
+  <mat-form-field>
+    <mat-label>Choose category</mat-label>
+    <mat-select [(ngModel)]="selectedCategory" name="category" required>
+      <ng-container *ngFor="let category of categories">
+        <mat-option [value]="category.id">
+          {{ category.name }}
+        </mat-option>
+      </ng-container>      
+    </mat-select>
+  </mat-form-field>
+  <div class="buttons-container">
+    <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+    <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+  </div>
+</form>

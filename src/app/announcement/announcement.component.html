@@ -4,8 +4,10 @@
 <p>{{ message }}</p> -->
 <div class="announcement-container">
     <h2 class="announcement-title">{{ announcement.title }}</h2>
-    <p class="announcement-message">{{ announcement.message }}</p>
+    <p class="announcement-message">{{ announcement.description }}</p>
     <p class="announcement-author">{{ announcement.author | byAuthor }}</p>
+    <button mat-raised-button color="primary"(click)="onEdit()">Edit</button>
+    <button mat-raised-button color="warn" (click)="onDelete()">Delete</button>
   </div>
 
 

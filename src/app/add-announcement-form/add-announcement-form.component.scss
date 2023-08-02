@@ -1,0 +1,38 @@
+.example-form {
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 8px;
+}
+
+h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+mat-form-field,
+mat-select {
+  width: 100%;
+}
+
+.mat-form-field-infix {
+  white-space: nowrap; /* To prevent the label and input from wrapping to the next line */
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 10px;
+}
+
+.buttons-container button:first-child {
+  margin-bottom: 10px; 
+}

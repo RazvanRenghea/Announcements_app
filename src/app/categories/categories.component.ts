@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { Category } from '../announcement/category';
+import { CategoryService } from '../services/category.service';
 
 @Component({
   selector: 'app-categories',
@@ -8,7 +9,18 @@ import { Category } from '../announcement/category';
 })
 export class CategoriesComponent {
   @Output() categorySelected: EventEmitter<Category> = new EventEmitter<Category>();
-  categories: Category[] = [{ id:1, name: 'Course' }, { id:2, name: 'General' }, { id:3, name: 'Laboratory' }, { id:4, name: 'All' }];
+  constructor(private categoryService: CategoryService) { }
+  categories: Category[] = [];
+  ngOnInit(): void {
+    this.categoryService.getCategories().subscribe(
+      (categoriesData: Category[]) => {
+        this.categories = categoriesData;
+      },
+      (error: any) => {
+        console.error('Error fetching categories:', error);
+      }
+    );
+  }
   onCategoryClick(event: any, category: Category) {
     event.preventDefault();
     this.categorySelected.emit(category);

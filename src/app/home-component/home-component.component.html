@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="header-container">
+    <app-categories (categorySelected)="onCategorySelected($event)"></app-categories>
+  </div>
+  <button mat-raised-button class="create-button" color="accent" [routerLink]="'/add-announcement'">Create New Announcement</button>
+</div>
+<p>
+  {{notificationMessage}}
+</p>
+<div class="app-container">
+  <h1 class="fancy-heading">Announcements</h1>
+  <div *ngFor="let announcement of filteredAnnouncements ?? []">
+    <app-announcement [announcement]="announcement" (announcementDeleted)="onAnnouncementDeleted($event)"></app-announcement>
+  </div>
+</div>
+
+
