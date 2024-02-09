@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NewsAPI</name>
+    </assembly>
+    <members>
+        <member name="M:NewsAPI.Controllers.AnnouncementController.GetAnnouncements">
+            <summary>
+            Retrieves all announcements.
+            </summary>
+        </member>
+        <member name="M:NewsAPI.Controllers.AnnouncementController.GetAnncouncement(System.Guid)">
+            <summary>
+            Retrieves an announcement.
+            </summary>
+            <param name="id">The ID of the announcement to get.</param>
+        </member>
+        <member name="M:NewsAPI.Controllers.AnnouncementController.CreateAnnouncement(NewsAPI.Models.Announcement)">
+            <summary>
+            Creates a new announcement using Announcement object.
+            </summary>
+        </member>
+        <member name="M:NewsAPI.Controllers.AnnouncementController.CreateAnnouncementbody(NewsAPI.Models.AnnouncementBody)">
+            <summary>
+            Creates a new announcement using AnnouncementBody object.
+            </summary>
+        </member>
+        <member name="M:NewsAPI.Controllers.AnnouncementController.UpdateAnnouncement(System.Guid,NewsAPI.Models.AnnouncementBody)">
+            <summary>
+            Updates an existing announcement.
+            </summary>
+            <param name="id">The ID of the announcement to update.</param>
+            <param name="model">The updated announcement data.</param>
+        </member>
+        <member name="M:NewsAPI.Controllers.AnnouncementController.DeleteAnnouncement(System.Guid)">
+            <summary>
+            Deletes an announcement.
+            </summary>
+            <param name="id">The ID of the announcement to delete.</param>
+        </member>
+        <member name="M:NewsAPI.Controllers.AnnouncementController.PartialUpdateAnnouncement(System.Guid,NewsAPI.Models.PartialAnnouncement)">
+            <summary>
+            Updates the title and description for an existing announcement.
+            </summary>
+            <param name="id">The ID of the announcement to update.</param>
+            <param name="model">The updated announcement data.</param>
+        </member>
+        <member name="M:NewsAPI.Controllers.CategoriesController.GetAllCategories">
+            <summary>
+            Retrieves all categories.
+            </summary>
+        </member>
+        <member name="M:NewsAPI.Controllers.CategoriesController.GetCategoryById(System.String)">
+            <summary>
+            Retrieves a category by its ID.
+            </summary>
+            <param name="id">The ID of the category to retrieve.</param>
+        </member>
+        <member name="M:NewsAPI.Controllers.CategoriesController.DeleteCategoryById(System.String)">
+            <summary>
+            Deletes a category by its ID.
+            </summary>
+            <param name="id">The ID of the category to delete.</param>
+        </member>
+        <member name="M:NewsAPI.Controllers.CategoriesController.AddCategory(NewsAPI.Models.Category)">
+            <summary>
+            Adds a new category.
+            </summary>
+            <param name="category">The category object to add.</param>
+        </member>
+    </members>
+</doc>
